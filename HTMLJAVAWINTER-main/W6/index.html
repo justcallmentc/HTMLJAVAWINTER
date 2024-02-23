@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+
+</head>
+
+<body>
+    <script>
+        hourlypay = prompt("How much are you paid hourly?");
+        hoursworked = prompt("How many hours did you work?");
+        grosspay = Number(hourlypay) * Number(hoursworked);
+        tax = grosspay * 0.2
+        netpay = grosspay - tax
+
+        alert("Grosspay: $" + grosspay + "\n" + "Uncle sam's share: $" + tax +"\n" + "Netpay: $" + netpay)
+
+        console.log(grosspay);
+        console.log(tax);
+        console.log(netpay);
+    </script>
+</body>
+
+</html>
