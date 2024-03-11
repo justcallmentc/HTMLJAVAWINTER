@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	]
+	
+	JBody = document.querySelector("body");
+
+	for(let i=0; i < people.length; i++)
+	{
+		tempDiv = document.createElement("div");
+		tempDiv.setAttribute("id", String(i));
+		tempDiv.setAttribute("style", "border:1px solid black");
+
+		const first = document.createElement("p");
+		const last = document.createElement("p");
+		const credit = document.createElement("p");
+
+		const firstN = document.createTextNode(people[i].first);
+		const lastN = document.createTextNode(people[i].last);
+		const creditN = document.createTextNode(people[i].credit);
+
+		first.appendChild(firstN);
+		last.appendChild(lastN);
+		credit.appendChild(creditN);
+
+		tempDiv.appendChild(first);
+		tempDiv.appendChild(last);
+		tempDiv.appendChild(credit);
+		JBody.appendChild(tempDiv);
+		}
+</script>
+
+</html>
